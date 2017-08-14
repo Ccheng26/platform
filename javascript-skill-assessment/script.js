@@ -36,6 +36,21 @@ Validating the user password with JavaScript
 2- Create a function that will validate the user’s password with the console method, “User password should not be empty!”
 */
 
+//Part 4.2
+function passid_validation(min,max){
+  let passId= document.getElementsByName('passid')[0].value;
+  if (passId==="" || passId.length===0){
+    console.log("User password should not be empty!");
+  } else if(passId.length<min){
+    console.log("User password is too short!");
+  } else if(passId.length>max){
+    console.log("User password is too long!");
+  } else{
+    //Part 5.1
+    let usernameId= document.getElementsByName('username')[0];
+    usernameId.focus();
+  }
+}
 
 
 
