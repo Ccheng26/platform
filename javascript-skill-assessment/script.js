@@ -60,7 +60,17 @@ Validating the user’s name with JavaScript
 2- Create a function that will validate the user’s password with the console method, “User’s name should have alphabet characters only!”
 */
 
-
+function allLetter(){
+  let usernameId= document.getElementsByName('username')[0].value;
+  for(let i=0; i<usernameId.length; i++){
+    if ((usernameId[i].toLowerCase().charCodeAt(0)< 97)
+      && (usernameId[i].toLowerCase().charCodeAt(0)> 122)){
+      //also an option but less coverage:
+      //(isNaN(parseInt(usernameId[i]))===false || usernameId[i] == "!" || usernameId[i] == "@" || usernameId[i] == "#" || usernameId[i] == "$" || usernameId[i] == "%" || usernameId[i] == "^" || usernameId[i] == "&" || usernameId[i] == "*" || usernameId[i] == "(" || usernameId[i] == ")" || usernameId[i] == `"` || usernameId[i] == "/" || usernameId[i] == ">" || usernameId[i] == "<" || usernameId[i] == ";" || usernameId[i] == "[" || usernameId[i] == "]" || usernameId[i] == ":" || usernameId[i] == "{" || usernameId[i] == "}" || usernameId[i] == "-" || usernameId[i] == "|")
+      console.log("User’s name should have alphabet characters only!")
+    }
+  }
+}
 
 
 
