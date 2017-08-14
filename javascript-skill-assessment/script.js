@@ -70,7 +70,17 @@ function allLetter(){
       console.log("User’s name should have alphabet characters only!")
     }
   }
+  let emailId= document.getElementsByName('email')[0];
+  emailId.focus();
 }
+
+/*
+Part 6
+Validating the user’s email with JavaScript
+
+1- Create a function that will have the text field focus will go to the email validation.
+2- Create a function that will validate the user’s password and with the console method, “You have entered an invalid email format!”
+*/
 
 
 
