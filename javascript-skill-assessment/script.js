@@ -7,25 +7,23 @@ Validating the user ID with JavaScript
 */
 
 // Part 3.1
-function firstfocus(){
-  let userId= document.getElementsByName('userid')[0];
+function firstfocus() {
+  let userId = document.getElementsByName('userid')[0];
   userId.focus();
 }
-
 // Part 3.2
-function userid_validation(min, max){
-  let userId= document.getElementsByName('userid')[0].value;
-  if (userId==="" || userId.length===0){
+function userid_validation(min, max) {
+  let userId = document.getElementsByName('userid')[0].value;
+  if (userId === "" || userId.length === 0) {
     console.log("User ID should not be empty!");
-  } else if(userId.length<min){
+  } else if (userId.length < min) {
     console.log("User ID is too short!");
-  } else if(userId.length>max){
+  } else if (userId.length > max) {
     console.log("User ID is too long!");
-  } else{
-    //Part 4.1
-    let passId= document.getElementsByName('passid')[0];
-    passId.focus();
   }
+  //Part 4.1
+  let passId = document.getElementsByName('passid')[0];
+  passId.focus();
 }
 
 /*
@@ -37,19 +35,18 @@ Validating the user password with JavaScript
 */
 
 //Part 4.2
-function passid_validation(min,max){
-  let passId= document.getElementsByName('passid')[0].value;
-  if (passId==="" || passId.length===0){
+function passid_validation(min, max) {
+  let passId = document.getElementsByName('passid')[0].value;
+  if (passId === "" || passId.length === 0) {
     console.log("User password should not be empty!");
-  } else if(passId.length<min){
+  } else if (passId.length < min) {
     console.log("User password is too short!");
-  } else if(passId.length>max){
+  } else if (passId.length > max) {
     console.log("User password is too long!");
-  } else{
-    //Part 5.1
-    let usernameId= document.getElementsByName('username')[0];
-    usernameId.focus();
   }
+  //Part 5.1
+  let usernameId = document.getElementsByName('username')[0];
+  usernameId.focus();
 }
 
 /*
@@ -60,17 +57,21 @@ Validating the user’s name with JavaScript
 2- Create a function that will validate the user’s password with the console method, “User’s name should have alphabet characters only!”
 */
 
-function allLetter(){
-  let usernameId= document.getElementsByName('username')[0].value;
-  for(let i=0; i<usernameId.length; i++){
-    if ((usernameId[i].toLowerCase().charCodeAt(0)< 97)
-      && (usernameId[i].toLowerCase().charCodeAt(0)> 122)){
-      //also an option but less coverage:
-      //(isNaN(parseInt(usernameId[i]))===false || usernameId[i] == "!" || usernameId[i] == "@" || usernameId[i] == "#" || usernameId[i] == "$" || usernameId[i] == "%" || usernameId[i] == "^" || usernameId[i] == "&" || usernameId[i] == "*" || usernameId[i] == "(" || usernameId[i] == ")" || usernameId[i] == `"` || usernameId[i] == "/" || usernameId[i] == ">" || usernameId[i] == "<" || usernameId[i] == ";" || usernameId[i] == "[" || usernameId[i] == "]" || usernameId[i] == ":" || usernameId[i] == "{" || usernameId[i] == "}" || usernameId[i] == "-" || usernameId[i] == "|")
-      console.log("User’s name should have alphabet characters only!")
+function allLetter() {
+  let usernameId = document.getElementsByName('username')[0].value;
+  if (usernameId === "") {
+    console.log("User’s name cannot be empty!")
+  } else {
+    for (let i = 0; i < usernameId.length; i++) {
+      if ((usernameId[i].toLowerCase().charCodeAt(0) < 97) && (usernameId[i].toLowerCase().charCodeAt(0) > 122)) {
+        //also an option but less coverage:
+        //(isNaN(parseInt(usernameId[i]))===false || usernameId[i] == "!" || usernameId[i] == "@" || usernameId[i] == "#" || usernameId[i] == "$" || usernameId[i] == "%" || usernameId[i] == "^" || usernameId[i] == "&" || usernameId[i] == "*" || usernameId[i] == "(" || usernameId[i] == ")" || usernameId[i] == `"` || usernameId[i] == "/" || usernameId[i] == ">" || usernameId[i] == "<" || usernameId[i] == ";" || usernameId[i] == "[" || usernameId[i] == "]" || usernameId[i] == ":" || usernameId[i] == "{" || usernameId[i] == "}" || usernameId[i] == "-" || usernameId[i] == "|")
+        console.log("User’s name should have alphabet characters only!")
+      }
     }
   }
-  let emailId= document.getElementsByName('email')[0];
+  //Part 6.1
+  let emailId = document.getElementsByName('email')[0];
   emailId.focus();
 }
 
@@ -82,26 +83,21 @@ Validating the user’s email with JavaScript
 2- Create a function that will validate the user’s password and with the console method, “You have entered an invalid email format!”
 */
 
-function ValidateEmail(){
-  let emailId= document.getElementsByName('email')[0].value;
+function ValidateEmail() {
+  let emailId = document.getElementsByName('email')[0].value;
   let symbolYes = false;
   let emailPos, periodPos;
-
-  for(let i=0; i<emailId.length; i++){
-    if(emailId[i]==="@"){
+  for (let i = 0; i < emailId.length; i++) {
+    if (emailId[i] === "@") {
       emailPos = i;
-      }
     }
-  for(let j=emailId.length; j>0; j--){
-      if(emailId[j]==="."){
-      periodPos = j
-     }
   }
-  if(emailPos < periodPos && periodPos != emailId.length-1  && emailPos+1 != periodPos){
-  } else {
+  for (let j = emailId.length; j > 0; j--) {
+    if (emailId[j] === ".") {
+      periodPos = j
+    }
+  }
+  if (emailPos < periodPos && periodPos != emailId.length - 1 && emailPos + 1 != periodPos) {} else {
     console.log("You have entered an invalid email format!");
   }
 }
-
-
-
