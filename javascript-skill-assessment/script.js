@@ -21,5 +21,24 @@ function userid_validation(min, max){
     console.log("User ID is too short!");
   } else if(userId.length>max){
     console.log("User ID is too long!");
+  } else{
+    //Part 4.1
+    let passId= document.getElementsByName('passid')[0];
+    passId.focus();
   }
 }
+
+/*
+Part 4
+Validating the user password with JavaScript
+
+1- In your script.js file, create a function that will have the text field focus will go to password validation.
+2- Create a function that will validate the user’s password with the console method, “User password should not be empty!”
+*/
+
+
+
+
+
+
+
