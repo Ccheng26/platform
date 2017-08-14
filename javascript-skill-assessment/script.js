@@ -82,7 +82,26 @@ Validating the user’s email with JavaScript
 2- Create a function that will validate the user’s password and with the console method, “You have entered an invalid email format!”
 */
 
+function ValidateEmail(){
+  let emailId= document.getElementsByName('email')[0].value;
+  let symbolYes = false;
+  let emailPos, periodPos;
 
+  for(let i=0; i<emailId.length; i++){
+    if(emailId[i]==="@"){
+      emailPos = i;
+      }
+    }
+  for(let j=emailId.length; j>0; j--){
+      if(emailId[j]==="."){
+      periodPos = j
+     }
+  }
+  if(emailPos < periodPos && periodPos != emailId.length-1  && emailPos+1 != periodPos){
+  } else {
+    console.log("You have entered an invalid email format!");
+  }
+}
 
 
 
