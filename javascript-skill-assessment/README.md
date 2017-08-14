@@ -18,7 +18,7 @@ Instructor will demonstrate how to perform the following instructions.
 Using the Github Desktop, create a Github repository and name the repository your first and last name as well as the name of the assignment. Example: baironvasquez-javaScriptAssignment. After creating a repository and uploading your work to this repository, submit a link of your Github repository to LMS in the assignment section.
 
 
-#### Part 1
+### Part 1
 ##### Structure and style of our form
 
 1. Let’s start by giving our form some structure. Please copy and paste the following HTML code onto your text editor and make sure to click “save as” giving the file the name of “index.html”.
@@ -50,7 +50,7 @@ Using the Github Desktop, create a Github repository and name the repository you
 </html>
 2. Open the index.html sheet in your browser to see the nifty form that you have created.
 
-##### Part 2
+### Part 2
 1. Now, let’s give your form some style. Please copy and paste the following css code onto your text editor and in the same folder as your index.html file make sure to click “save as” giving the file the name of style.css.
  h1{ 
  margin-left: 50px; 
@@ -92,24 +92,24 @@ form textarea {
 2. Open the index.html sheet in your browser and make sure that the styling has been applied.
 At this point, your form should look something like this:
 
-#### Part 3
+### Part 3
 ##### Validating the user ID with JavaScript
 1. On your text editor, create a “script.js” file and save in the same folder as your index.html and style.css.  After form loads create a function that will have the text field focus go to the User ID field.
 
 2. Create a function that will validate the User’s ID with the console method, “User ID should not be empty!”
 
-#### Part 4
+### Part 4
 ##### Validating the user password with JavaScript
 
 1. In your script.js file, create a function that will have the text field focus will go to password validation.
 2. Create a function that will validate the user’s password with the console method, “User password should not be empty!”
 
-#### Part 5
+### Part 5
 ##### Validating the user’s name with JavaScript
 1. Create a function that will have the text field focus will go to the name validation.
 2. Create a function that will validate the user’s password with the console method, “User’s name should have alphabet characters only!”
 
-#### Part 6
+### Part 6
 ##### Validating the user’s email with JavaScript
 1. Create a function that will have the text field focus will go to the email validation.
 2. Create a function that will validate the user’s password and with the console method, “You have entered an invalid email format!”
