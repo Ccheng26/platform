@@ -1,3 +1,8 @@
+var userValid=false;
+var passwordValid=false;
+var usernameValid=false;
+var emailValid=false;
+var validationCheck= [];
 /*
 Part 3
 Validating the user ID with JavaScript
@@ -10,6 +15,12 @@ Validating the user ID with JavaScript
 function firstfocus() {
   let userId = document.getElementsByName('userid')[0];
   userId.focus();
+  let submitButton = document.getElementsByName('submit')[0]
+  submitButton.removeAttribute('onclick')
+  submitButton.addEventListener('click', function(e){ //say this is an anchor
+        e.preventDefault();
+        validator();
+   });
 }
 // Part 3.2
 function userid_validation(min, max) {
@@ -20,6 +31,9 @@ function userid_validation(min, max) {
     console.log("User ID is too short!");
   } else if (userId.length > max) {
     console.log("User ID is too long!");
+  } else{
+    userValid=true;
+    validationCheck.push(userValid);
   }
   //Part 4.1
   let passId = document.getElementsByName('passid')[0];
@@ -43,6 +57,9 @@ function passid_validation(min, max) {
     console.log("User password is too short!");
   } else if (passId.length > max) {
     console.log("User password is too long!");
+  } else{
+    passwordValid= true;
+    validationCheck.push(passwordValid);
   }
   //Part 5.1
   let usernameId = document.getElementsByName('username')[0];
@@ -67,6 +84,9 @@ function allLetter() {
         //also an option but less coverage:
         //(isNaN(parseInt(usernameId[i]))===false || usernameId[i] == "!" || usernameId[i] == "@" || usernameId[i] == "#" || usernameId[i] == "$" || usernameId[i] == "%" || usernameId[i] == "^" || usernameId[i] == "&" || usernameId[i] == "*" || usernameId[i] == "(" || usernameId[i] == ")" || usernameId[i] == `"` || usernameId[i] == "/" || usernameId[i] == ">" || usernameId[i] == "<" || usernameId[i] == ";" || usernameId[i] == "[" || usernameId[i] == "]" || usernameId[i] == ":" || usernameId[i] == "{" || usernameId[i] == "}" || usernameId[i] == "-" || usernameId[i] == "|")
         console.log("User’s name should have alphabet characters only!")
+      } else{
+        usernameValid = true;
+        validationCheck.push(usernameValid);
       }
     }
   }
@@ -97,7 +117,26 @@ function ValidateEmail() {
       periodPos = j
     }
   }
-  if (emailPos < periodPos && periodPos != emailId.length - 1 && emailPos + 1 != periodPos) {} else {
+  if ((emailPos < periodPos) && (periodPos != emailId.length - 1) && (emailPos + 1 != periodPos) && (emailPos != 0)) {
+    emailValid = true;
+    validationCheck.push(emailValid);
+  } else {
     console.log("You have entered an invalid email format!");
   }
 }
+
+function validator(){
+  let validationFinal = 0;
+  for(let i=0; i< validationCheck.length;i++){
+    if(validationCheck[i]===true){
+      validationFinal++
+    }
+  }
+  if(validationFinal===4){
+    alert('Form submitted successfully');
+    location.reload();
+  } else {
+    alert('Sorry something went wrong, check the console for errors')
+  }
+}
+
