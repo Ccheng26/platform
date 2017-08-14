@@ -52,6 +52,15 @@ function passid_validation(min,max){
   }
 }
 
+/*
+Part 5
+Validating the user’s name with JavaScript
+
+1- Create a function that will have the text field focus will go to the name validation.
+2- Create a function that will validate the user’s password with the console method, “User’s name should have alphabet characters only!”
+*/
+
+
 
 
 
