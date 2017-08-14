@@ -11,3 +11,15 @@ function firstfocus(){
   let userId= document.getElementsByName('userid')[0];
   userId.focus();
 }
+
+// Part 3.2
+function userid_validation(min, max){
+  let userId= document.getElementsByName('userid')[0].value;
+  if (userId==="" || userId.length===0){
+    console.log("User ID should not be empty!");
+  } else if(userId.length<min){
+    console.log("User ID is too short!");
+  } else if(userId.length>max){
+    console.log("User ID is too long!");
+  }
+}
