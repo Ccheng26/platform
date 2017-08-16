@@ -1,4 +1,4 @@
-# Javascript Skill Assessment
+# Javascript Skill Assignment
 ### HTML Form Validation with Javascript
 Today we will be practicing HTML form validation with Javascript.
 #### Assignment Duration: 1 hour.
