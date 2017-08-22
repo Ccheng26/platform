@@ -42,4 +42,4 @@ public class Collections {
 		System.out.println(c.printEvenNumbers());
 		System.out.println(c.retrieveEvenNumber(20)); 
 	};//End main
-}
+};
